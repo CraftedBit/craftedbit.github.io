@@ -213,3 +213,41 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 15px 3%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .home {
+        padding: 30px 3% 0;
+    }
+
+    .home-content h3,
+    .home-content h3:nth-of-type(2),
+    .home-content h1,
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .social-media a {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        margin: 15px 8px 15px 0;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
