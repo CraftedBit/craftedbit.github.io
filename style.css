@@ -50,13 +50,15 @@ span {
     z-index: 100;
 }
 
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+}
+
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
@@ -214,13 +216,12 @@ span {
     border-radius: 2rem;
     text-align: center;
     border: 0.2rem solid var(--bg-color);
-    // transition: 0.5s ease;
 }
 
 .skills-container .skills-box:hover {
     border-color: var(--highlight-color);
     transform: scale(1.02);
-} /* Consider adding reveal animation*/
+} 
 
 .skills-box i {
     font-size: 7rem;
@@ -238,7 +239,6 @@ span {
 
 .projects {
     background: var(--second-bg-color);
-    //padding: 4rem;
 }
 
 .projects h2 {
@@ -357,6 +357,161 @@ span {
     cursor: pointer;
 }
 
+/* MEDIA BREAKPOINTS */
+@media (min-width: 821px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        row-gap: 0rem;
+    }
+
+    .skills-container .skills-box {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .home {
+        padding-top: 7rem;
+    }
+
+    .skills {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .projects {
+        padding-bottom: 7rem;  
+    }
+}
+
+@media (max-width: 821px) { 
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+        row-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0 .2);
+        box-shadow: 0 .5rem 1 rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        animation: slideRight 0.1s ease forwards;
+    }
+
+    .home {
+        flex-direction: column;
+
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projects h2 {
+        margin-bottom: 3rem;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+}
+
 /* KEYFRAMES ANIMATION */
 @KEYFRAMES slideRight {
     0% {
@@ -422,39 +577,5 @@ span {
     }
     100% {
         transform: translateY(0);
-    }
-}
-
-@media (min-width: 821px) {
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-        row-gap: 0rem;
-    }
-
-    .skills-container .skills-box {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1201px) {
-    .project-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 821px) {
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
-        row-gap: 1.5rem;
-    }
-
-    .project-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (max-width: 540px) {
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 }
