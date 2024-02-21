@@ -174,6 +174,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
     gap: 2rem;
     background: var(--second-bg-color)
 }
@@ -185,6 +186,10 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem;
+}
+
+.about-content {
+    max-width: 600px;
 }
 
 .about-content h2 {
@@ -355,6 +360,39 @@ span {
 .contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
+}
+
+.construction-content {
+    margin-top: 5rem;
+    justify-contet: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.builder-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.builder-img img {
+    max-width: 100%;
+    height: auto;
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+    padding: 2.2rem 0 0;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2rem;
+}
+
+.back-btn a {
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0s;
 }
 
 /* MEDIA BREAKPOINTS */
