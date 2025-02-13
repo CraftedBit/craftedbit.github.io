@@ -395,6 +395,26 @@ span {
     animation-delay: 0s;
 }
 
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* MEDIA BREAKPOINTS */
 @media (min-width: 821px) {
     .skills-container {
