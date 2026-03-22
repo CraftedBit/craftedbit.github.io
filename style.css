@@ -206,42 +206,6 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.skills h2 {
-    margin-bottom: 5rem;
-}
-
-.skills-container {
-    display: grid;
-    column-gap: 1.5rem;
-}
-
-.skills-container .skills-box {
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 1.5rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: 0.2rem solid var(--bg-color);
-}
-
-.skills-container .skills-box:hover {
-    border-color: var(--highlight-color);
-    transform: scale(1.02);
-} 
-
-.skills-box i {
-    font-size: 7rem;
-    color: var(--highlight-color);
-}
-
-.skills-box h3 {
-    font-size: 2.6rem;
-}
-
-.skills-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 1rem;
-}
-
 .projects {
     background: var(--second-bg-color);
 }
@@ -321,47 +285,6 @@ span {
     color: var(--second-bg-color);
 }
 
-.contact h2 { 
-    margin-bottom: 3rem;
-}
-
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--second-bg-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-}
-
-.contact form .input-box input {
-    width: 49%
-}
-
-.contact form textarea {
-    resize: none;
-}
-
-.contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
-}
-
 .construction-content {
     margin-top: 5rem;
     justify-content: center;
@@ -416,17 +339,6 @@ footer a:hover {
 }
 
 /* MEDIA BREAKPOINTS */
-@media (min-width: 821px) {
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-        row-gap: 0rem;
-    }
-
-    .skills-container .skills-box {
-        margin-bottom: 2rem;
-    }
-}
-
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -450,23 +362,8 @@ footer a:hover {
         padding-top: 7rem;
     }
 
-    .skills {
-        padding-bottom: 7rem;
-    }
-
-    .contact {
-        min-height: auto;
-    }
-
     .projects {
         padding-bottom: 7rem;  
-    }
-}
-
-@media (max-width: 821px) { 
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
-        row-gap: 1.5rem;
     }
 }
 
@@ -525,10 +422,6 @@ footer a:hover {
         margin-top: 4rem;
     }
 
-    .skills h2 {
-        margin-bottom: 3rem;
-    }
-
     .projects h2 {
         margin-bottom: 3rem;
     }
@@ -544,19 +437,9 @@ footer a:hover {
     }
 }
 
-@media (max-width: 540px) {
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    }
-}
-
 @media (max-width: 450px) {
     html {
         font-size: 50%
-    }
-
-    .contact form .input-box input {
-        width: 100%;
     }
 }
 
