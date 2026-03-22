@@ -45,9 +45,9 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.skills-container, .project-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.project-box', { origin: 'bottom' });
 ScrollReveal().reveal('.about-img, .logo', { origin: 'left' });
-ScrollReveal().reveal('.about-content,', { origin: 'right' });
+ScrollReveal().reveal('.about-content', { origin: 'right' });
 
 /*=================== typing text animation ====================*/
 var typed = new Typed(".multiple-text", {
