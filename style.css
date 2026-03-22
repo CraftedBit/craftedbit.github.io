@@ -7,7 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -364,7 +364,7 @@ span {
 
 .construction-content {
     margin-top: 5rem;
-    justify-contet: center;
+    justify-content: center;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -482,8 +482,8 @@ footer a:hover {
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0 .2);
-        box-shadow: 0 .5rem 1 rgba(0, 0, 0, .2);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
 
