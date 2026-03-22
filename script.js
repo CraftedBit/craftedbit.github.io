@@ -51,7 +51,7 @@ ScrollReveal().reveal('.about-content,', { origin: 'right' });
 
 /*=================== typing text animation ====================*/
 var typed = new Typed(".multiple-text", {
-    strings: ["Software Developer", "Control Engineer", "Climber", "Runner"],
+    strings: ["web apps", "IoT solutions", "developer tools", "things that matter"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
