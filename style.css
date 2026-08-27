@@ -332,6 +332,7 @@ span {
 }
 
 .timeline-employer {
+    width: 100%;
     max-width: 88rem;
     margin: 0 auto 3rem;
     padding-left: 15rem;
@@ -340,6 +341,7 @@ span {
 }
 
 .timeline {
+    width: 100%;
     max-width: 88rem;
     margin: 0 auto;
 }
@@ -411,6 +413,7 @@ span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(28rem, 100%), 1fr));
     gap: 2.5rem;
+    width: 100%;
     max-width: 110rem;
     margin: 0 auto;
 }
@@ -449,6 +452,7 @@ span {
 }
 
 .contact form {
+    width: 100%;
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
