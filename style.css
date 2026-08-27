@@ -312,54 +312,67 @@ span {
     pointer-events: none;
 }
 
+.experience,
+.skills,
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
 .experience .heading {
     margin-bottom: 5rem;
 }
 
+.timeline-employer {
+    max-width: 88rem;
+    margin: 0 auto 3rem;
+    padding-left: 15rem;
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+}
+
 .timeline {
-    max-width: 80rem;
+    max-width: 88rem;
     margin: 0 auto;
-    border-left: 0.2rem solid var(--highlight-color);
-    padding-left: 3rem;
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    column-gap: 3rem;
 }
 
-.timeline-item:last-child {
-    margin-bottom: 0;
+.timeline-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--highlight-color);
+    text-align: right;
+    padding-top: 0.4rem;
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -3.9rem;
-    top: 0.8rem;
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    background: var(--highlight-color);
+.timeline-body {
+    border-left: 0.2rem solid var(--highlight-color);
+    padding-left: 3rem;
+    padding-bottom: 4rem;
 }
 
-.timeline-item h3 {
+.timeline-item:last-child .timeline-body {
+    padding-bottom: 0;
+}
+
+.timeline-body h3 {
     font-size: 2.2rem;
     font-weight: 600;
-}
-
-.timeline-meta {
-    display: block;
-    font-size: 1.4rem;
-    color: var(--highlight-color);
     margin-bottom: 1.2rem;
 }
 
-.timeline-item ul {
+.timeline-body ul {
     list-style: none;
 }
 
-.timeline-item li {
+.timeline-body li {
     position: relative;
     font-size: 1.55rem;
     line-height: 1.7;
@@ -367,15 +380,11 @@ span {
     margin-bottom: 0.9rem;
 }
 
-.timeline-item li::before {
-    content: '';
+.timeline-body li::before {
+    content: '\2022';
     position: absolute;
     left: 0;
-    top: 0.9rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    background: var(--highlight-color);
+    color: var(--highlight-color);
     opacity: 0.7;
 }
 
