@@ -26,7 +26,7 @@
 
     <body>
         <!-- header design -->
-        <header class ="header">
+        <header class="header">
             <a href="index.html" class="logo">Josh Waters</a>
 
             <i class='bx bx-menu' id="menu-icon"></i>
@@ -34,19 +34,23 @@
             <nav class="navbar">
                 <a href="#home" style="--i:1;" class="active">Home</a>
                 <a href="#about" style="--i:2;">About</a>
-                <a href="#projects" style="--i:3;">Projects</a>
+                <a href="#experience" style="--i:3;">Experience</a>
+                <a href="#skills" style="--i:4;">Skills</a>
+                <a href="#projects" style="--i:5;">Projects</a>
+                <a href="#contact" style="--i:6;">Contact</a>
             </nav>
         </header>
 
         <!-- home section design -->
-        <section class="home" id = "home">
+        <section class="home" id="home">
             <div class="home-content">
                 <h3>Hey, I'm</h3>
                 <h1>Josh Waters</h1>
                 <h3>I build <span class="multiple-text"></span></h3>
-                <p>Software developer with a control engineering background.
-                    I like solving real problems, from predictive maintenance tools
-                    to full-stack web apps. Sheffield grad, climber, and perpetual tinkerer.</p>
+                <p>Software engineer currently working on production IoT platforms.
+                    Experience includes fully dynamic dashboards, sensor calibration and
+                    monitoring tools, and predictive maintenance algorithms. Mechatronics
+                    background, heading towards infrastructure and security.</p>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/joshua-waters3/" style="--i:7;"><i class='bx bxl-linkedin' ></i></a>
                     <a href="https://github.com/CraftedBit" style="--i:8;"><i class='bx bxl-github'></i></a>
@@ -67,12 +71,120 @@
 
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
-                <h3>Technical Specialist & Developer</h3>
-                <p>I studied Control Engineering at Sheffield and fell into software along the way.
-                    These days I build full-stack web apps, IoT tooling, and whatever else needs solving.
-                    I pick up whatever the problem needs.</p>
-                <p>Outside of work you'll find me halfway up a climbing wall or
-                    out running somewhere in the countryside.</p>
+                <h3>Software Engineer</h3>
+                <p>I build and maintain production IoT tooling at a software as a service
+                    company. Projects include an Angular asset management dashboard, an asset
+                    predictive maintenance toolkit, and a set of Python utilities that keep
+                    hardware in the field working.</p>
+                <p>I studied Mechatronics, Robotics and Automation Engineering at Sheffield.
+                    My dissertation looked at false data injection attacks against
+                    cyber-physical systems. That interest has stuck and I am currently
+                    working toward a role that brings together infrastructure, DevOps
+                    and security.</p>
+                <p>Outside of work you can usually find me half way up a wall bouldering,
+                    out on the streets running, or hunched over a guitar.</p>
+            </div>
+        </section>
+
+        <!-- experience section design -->
+        <section class="experience" id="experience">
+            <h2 class="heading">Experience</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Software Engineer</h3>
+                    <span class="timeline-meta">2026 - Present</span>
+                    <ul>
+                        <li>Lead developer on the asset management dashboard. Took it from
+                            prototype to running in production, built on a widget architecture
+                            so layouts can be configured per customer instead of hard-coded.</li>
+                        <li>I own a spread of production tooling end to end, across Angular,
+                            TypeScript, PHP, Python and MySQL. Writing the feature and
+                            answering for it when it breaks.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Technical Specialist, Software Engineer</h3>
+                    <span class="timeline-meta">2025 - 2026</span>
+                    <ul>
+                        <li>Built the predictive maintenance toolkit for sensor monitoring.
+                            FFTs, moving averages and anomaly detection under the hood, but
+                            what it does is catch failing assets before the customer
+                            notices. Works against any dataset.</li>
+                        <li>Rebuilt the sensor soak and calibration pipeline from scratch in
+                            three months. Multi-threaded, PyQt6, connection pooling,
+                            parameterised SQL, automated tests. The tool it replaced failed
+                            constantly.</li>
+                        <li>Picked up half a dozen production Python tools when a colleague
+                            left, and kept customer operations running for a year without
+                            a gap.</li>
+                        <li>Mentored a new Angular developer for six months, across the
+                            frontend, the PHP backend, the database, and the architecture
+                            nobody had written down.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Trainee Technical Support</h3>
+                    <span class="timeline-meta">2024 - 2025</span>
+                    <ul>
+                        <li>Became the person development and product came to for anything
+                            technical across the stack.</li>
+                        <li>Dug into backend database problems with SQL, and started the
+                            Python sensor-analysis scripts that grew into the predictive
+                            maintenance toolkit above.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- skills section design -->
+        <section class="skills" id="skills">
+            <h2 class="heading">My <span>Skills</span></h2>
+
+            <div class="skills-container">
+                <div class="skills-box">
+                    <i class='bx bxl-python'></i>
+                    <h3>Python</h3>
+                    <p>Production tooling, sensor pipelines and desktop applications. PyQt6,
+                        Pandas, NumPy, SQLAlchemy, Matplotlib and Pytest.</p>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-angular'></i>
+                    <h3>Angular &amp; TypeScript</h3>
+                    <p>Lead developer on a production asset management dashboard. Component
+                        architecture, dependency injection and REST API integration.</p>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bx-line-chart'></i>
+                    <h3>Predictive Maintenance</h3>
+                    <p>Forecasting asset servicing from IoT sensor data, using fast Fourier
+                        transforms, moving averages and anomaly detection.</p>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bx-data'></i>
+                    <h3>Databases</h3>
+                    <p>MySQL and MongoDB. Schema design, query optimisation and parameterised
+                        access that does not fall over to injection.</p>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-tux'></i>
+                    <h3>Linux &amp; Self-hosting</h3>
+                    <p>Running my own services on my own hardware. The direction I am taking
+                        my career: infrastructure, DevOps and security.</p>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bx-network-chart'></i>
+                    <h3>Cyber-Physical Systems</h3>
+                    <p>Dissertation on false data injection attacks against state estimation
+                        in critical infrastructure. Where control engineering meets security.</p>
+                </div>
             </div>
         </section>
 
@@ -83,26 +195,22 @@
 
             <div class="image-track" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                 <div class="track-card">
+                    <img src="resources/images/fdi.png" alt="IEEE 118-bus measurement matrix sparsity" draggable="false">
+                    <div class="track-card-info">
+                        <h4>False Data Injection</h4>
+                        <p>Can you feed a power grid false readings without tripping its
+                            bad-data detector? Final year project, simulated in MATLAB across
+                            the IEEE 30, 57 and 118-bus networks.</p>
+                        <a class="track-card-link" href="https://github.com/CraftedBit/False-Data-Injection-Attacks" target="_blank" rel="noopener">View code <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="track-card">
                     <img src="resources/images/portfolio.png" alt="Portfolio website" draggable="false">
                     <div class="track-card-info">
                         <h4>Portfolio</h4>
-                        <p>This site. HTML, CSS and JavaScript.</p>
-                    </div>
-                </div>
-
-                <div class="track-card">
-                    <img src="resources/images/Unity-platformer.png" alt="Unity platformer game" draggable="false">
-                    <div class="track-card-info">
-                        <h4>Unity Game</h4>
-                        <p>2D platformer built in Unity with C#.</p>
-                    </div>
-                </div>
-
-                <div class="track-card">
-                    <img src="resources/images/discord.png" alt="Discord bot" draggable="false">
-                    <div class="track-card-info">
-                        <h4>Discord Bot</h4>
-                        <p>JavaScript, Discord API and MongoDB.</p>
+                        <p>This site. HTML, CSS and JavaScript, no framework.</p>
+                        <a class="track-card-link" href="https://github.com/CraftedBit/craftedbit.github.io" target="_blank" rel="noopener">View code <i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -111,6 +219,24 @@
                     <div class="track-card-info">
                         <h4>Chess AI</h4>
                         <p>Chess engine using chess.js.</p>
+                    </div>
+                </div>
+
+                <div class="track-card">
+                    <img src="resources/images/Unity-platformer.png" alt="Unity platformer game" draggable="false">
+                    <div class="track-card-info">
+                        <h4>Unity Platformer</h4>
+                        <p>My first go at a game. A 2D platformer in Unity and C#, built to
+                            find out how the engine fits together. Rough, but playable.</p>
+                        <a class="track-card-link" href="https://craftedbit.itch.io/my-first-simple-platformer" target="_blank" rel="noopener">Play it <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="track-card">
+                    <img src="resources/images/discord.png" alt="Discord bot" draggable="false">
+                    <div class="track-card-info">
+                        <h4>Discord Bot</h4>
+                        <p>JavaScript, Discord API and MongoDB.</p>
                     </div>
                 </div>
 
@@ -132,6 +258,27 @@
             </div>
         </section>
 
+        <!-- contact section design -->
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <input type="hidden" name="access_key" value="792b8b0b-d257-4a43-ad92-672bb0cf7727">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="Subject" placeholder="Subject" required>
+                </div>
+                <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <button type="submit" class="btn">Send Message</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
+        </section>
+
         <!-- footer -->
         <footer>
             <p>Built by Josh Waters.</p>
@@ -144,6 +291,6 @@
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!-- custom js -->
-        <script src="script.js"></script>  
+        <script src="script.js"></script>
     </body>
 </html>

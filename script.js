@@ -50,7 +50,7 @@ ScrollReveal().reveal('.about-content', { origin: 'right' });
 
 /*=================== typing text animation ====================*/
 var typed = new Typed(".multiple-text", {
-    strings: ["web apps", "IoT solutions", "developer tools", "things that matter"],
+    strings: ["production IoT tooling", "dynamic dashboards", "predictive maintenance", "signal processing"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -83,9 +83,17 @@ const track = document.getElementById("image-track");
 if (track) {
     const handleOnDown = e => {
         track.dataset.mouseDownAt = e.clientX;
+        track.dataset.dragStartAt = e.clientX;
     };
 
-    const handleOnUp = () => {
+    const handleOnUp = e => {
+        const start = parseFloat(track.dataset.dragStartAt || "0");
+        const moved = start && e ? Math.abs(e.clientX - start) : 0;
+        track.classList.toggle('is-dragging', moved > 5);
+        if (moved > 5) {
+            setTimeout(() => track.classList.remove('is-dragging'), 0);
+        }
+
         track.dataset.mouseDownAt = "0";
         track.dataset.prevPercentage = track.dataset.percentage || "0";
     };
@@ -117,11 +125,46 @@ if (track) {
 
     /* mouse events */
     track.addEventListener('mousedown', e => handleOnDown(e));
-    window.addEventListener('mouseup', () => handleOnUp());
+    window.addEventListener('mouseup', e => handleOnUp(e));
     window.addEventListener('mousemove', e => handleOnMove(e));
 
     /* touch events */
     track.addEventListener('touchstart', e => handleOnDown(e.touches[0]));
-    window.addEventListener('touchend', () => handleOnUp());
+    window.addEventListener('touchend', e => handleOnUp(e.changedTouches[0]));
     window.addEventListener('touchmove', e => handleOnMove(e.touches[0]));
+}
+/*=================== contact form submit ====================*/
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm && formStatus && window.fetch) {
+    contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const button = contactForm.querySelector('button[type="submit"]');
+        formStatus.className = 'form-status';
+        formStatus.textContent = 'Sending...';
+        button.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(contactForm)
+            });
+
+            if (response.ok) {
+                formStatus.classList.add('ok');
+                formStatus.textContent = "Thanks, message sent. I'll get back to you.";
+                contactForm.reset();
+            } else {
+                throw new Error('Request failed');
+            }
+        } catch (err) {
+            formStatus.classList.add('err');
+            formStatus.textContent = 'Something went wrong. Try again, or reach me on LinkedIn.';
+        } finally {
+            button.disabled = false;
+        }
+    });
 }
