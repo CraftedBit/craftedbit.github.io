@@ -208,81 +208,76 @@ span {
 
 .projects {
     background: var(--second-bg-color);
+    overflow: hidden;
+    padding-bottom: 6rem;
 }
 
 .projects h2 {
+    margin-bottom: 1rem;
+}
+
+.projects-hint {
+    text-align: center;
+    font-size: 1.4rem;
+    opacity: 0.5;
     margin-bottom: 4rem;
 }
 
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.project-container .project-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
+/* image track carousel */
+.image-track {
     display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    transform: translate(0%, 0%);
+    user-select: none;
+    cursor: grab;
 }
 
-.project-box img {
+.image-track:active {
+    cursor: grabbing;
+}
+
+.track-card {
+    position: relative;
+    width: 40vmin;
+    height: 56vmin;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.track-card img {
     width: 100%;
-    height: auto;
-    transition: 0.5s ease;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% center;
+    pointer-events: none;
 }
 
-.project-box:hover img {
-    transform: scale(1.1);
-}
-
-.project-box .project-layer {
+.track-card-info {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--highlight-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(200%);
-    transition: 0.5s ease;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
 }
 
-.project-box:hover .project-layer {
+.track-card:hover .track-card-info {
     transform: translateY(0);
 }
 
-.project-layer h4 {
-    font-size: 3rem;
+.track-card-info h4 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
 }
 
-.project-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-}
-
-.project-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: var(--text-color);
-    border-radius: 50%;
-    margin: 0 0 .6rem;
-}
-
-.project-layer a i {
-    font-size: 2rem;
-    color: var(--second-bg-color);
+.track-card-info p {
+    font-size: 1.4rem;
+    opacity: 0.85;
 }
 
 .construction-content {
@@ -344,9 +339,6 @@ footer a:hover {
         font-size: 55%;
     }
 
-    .project-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 991px) {
@@ -424,16 +416,6 @@ footer a:hover {
 
     .projects h2 {
         margin-bottom: 3rem;
-    }
-
-    .project-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 617px) {
-    .project-container {
-        grid-template-columns: 1fr;
     }
 }
 

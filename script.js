@@ -45,7 +45,6 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.project-box', { origin: 'bottom' });
 ScrollReveal().reveal('.about-img, .logo', { origin: 'left' });
 ScrollReveal().reveal('.about-content', { origin: 'right' });
 
@@ -77,3 +76,52 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+/*=================== image track carousel ====================*/
+const track = document.getElementById("image-track");
+
+if (track) {
+    const handleOnDown = e => {
+        track.dataset.mouseDownAt = e.clientX;
+    };
+
+    const handleOnUp = () => {
+        track.dataset.mouseDownAt = "0";
+        track.dataset.prevPercentage = track.dataset.percentage || "0";
+    };
+
+    const handleOnMove = e => {
+        if (track.dataset.mouseDownAt === "0") return;
+
+        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+        const maxDelta = window.innerWidth / 2;
+
+        const percentage = (mouseDelta / maxDelta) * -100;
+        const prevPercentage = parseFloat(track.dataset.prevPercentage);
+        const nextPercentageUnconstrained = prevPercentage + percentage;
+        const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+        track.dataset.percentage = nextPercentage;
+
+        track.animate({
+            transform: `translate(${nextPercentage}%, 0%)`
+        }, { duration: 1200, fill: "forwards" });
+
+        const images = track.querySelectorAll('.track-card img');
+        for (const image of images) {
+            image.animate({
+                objectPosition: `${100 + nextPercentage}% center`
+            }, { duration: 1200, fill: "forwards" });
+        }
+    };
+
+    /* mouse events */
+    track.addEventListener('mousedown', e => handleOnDown(e));
+    window.addEventListener('mouseup', () => handleOnUp());
+    window.addEventListener('mousemove', e => handleOnMove(e));
+
+    /* touch events */
+    track.addEventListener('touchstart', e => handleOnDown(e.touches[0]));
+    window.addEventListener('touchend', () => handleOnUp());
+    window.addEventListener('touchmove', e => handleOnMove(e.touches[0]));
+}
