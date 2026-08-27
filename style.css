@@ -607,8 +607,9 @@ footer a:hover {
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+        overflow: hidden;
         display: none;
     }
 
@@ -620,7 +621,7 @@ footer a:hover {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        animation: slideRight 0.1s ease forwards;
+        animation: fadeIn 0.2s ease forwards;
     }
 
     .home {
@@ -780,5 +781,14 @@ footer a:hover {
     .social-media a,
     .btn {
         opacity: 1 !important;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
