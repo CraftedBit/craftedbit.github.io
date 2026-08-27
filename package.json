@@ -1,0 +1,21 @@
+{
+  "name": "craftedbit.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "measure": "node tools/measure.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CraftedBit/craftedbit.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CraftedBit/craftedbit.github.io/issues"
+  },
+  "homepage": "https://github.com/CraftedBit/craftedbit.github.io#readme",
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  },
+  "private": true
+}
