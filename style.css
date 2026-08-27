@@ -459,16 +459,55 @@ span {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
+    font-family: inherit;
     color: var(--text-color);
-    background: var(--second-bg-color);
-    border: 0.2rem solid transparent;
+    background: var(--bg-color);
+    border: 0.2rem solid rgba(255, 255, 255, 0.35);
     border-radius: 0.8rem;
     margin: 0.7rem 0;
+    transition: border-color 0.2s ease;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: #9c93a1;
 }
 
 .contact form input:focus,
 .contact form textarea:focus {
     border-color: var(--highlight-color);
+}
+
+.contact form input:not(:placeholder-shown):invalid,
+.contact form textarea:not(:placeholder-shown):invalid {
+    border-color: #e2777a;
+}
+
+.contact form .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.contact form .btn:focus-visible {
+    outline: 0.2rem solid var(--text-color);
+    outline-offset: 0.3rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* honeypot */
+.contact form input[name="botcheck"] {
+    display: none;
 }
 
 .contact form .input-box input {
