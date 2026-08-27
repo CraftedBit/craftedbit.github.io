@@ -50,8 +50,12 @@ span {
     z-index: 100;
 }
 
+.header {
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.12);
+}
+
 .header.sticky {
-    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.35);
 }
 
 .logo {
@@ -545,9 +549,15 @@ span {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.12);
+    padding: 3rem 9%;
+    font-size: 1.4rem;
     color: var(--text-color);
+}
+
+footer p {
+    opacity: 0.7;
 }
 
 footer a {
@@ -644,12 +654,24 @@ footer a:hover {
         margin-bottom: 3rem;
     }
 
-    .timeline {
-        padding-left: 2.2rem;
+    .timeline-employer {
+        padding-left: 0;
     }
 
-    .timeline-item::before {
-        left: -3.1rem;
+    .timeline-item {
+        grid-template-columns: 1fr;
+        row-gap: 0.6rem;
+    }
+
+    .timeline-date {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .timeline-body {
+        border-left: none;
+        padding-left: 0;
+        padding-bottom: 3.5rem;
     }
 
     .contact form .input-box input {
