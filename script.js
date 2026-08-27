@@ -45,7 +45,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.about-img, .logo', { origin: 'left' });
+ScrollReveal().reveal('.about-img', { origin: 'left' });
 ScrollReveal().reveal('.about-content', { origin: 'right' });
 
 /*=================== typing text animation ====================*/
